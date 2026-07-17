@@ -12,6 +12,10 @@ public class DemoController {
     public String getTest() {
         return "Hello world!";
     }
-    
+
+    @GetMapping("/greet")
+    public String greet(@RequestParam(name = "name", defaultValue = "world") String name) {
+        return "Hello, " + name + "!";
+    }
 
 }
